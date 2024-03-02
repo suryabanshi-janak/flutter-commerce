@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_commerce/theme/theme.dart';
+
+import 'package:flutter_commerce/utils/theme/theme.dart';
 
 void main() {
   runApp(const MyApp());
