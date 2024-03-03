@@ -11,8 +11,41 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:flutter_commerce/utils/constants/colors.dart';
 import 'package:flutter_commerce/utils/helpers/helper_functions.dart';
 
-class OnboardingScreen extends StatelessWidget {
+class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
+
+  @override
+  State<OnboardingScreen> createState() => _OnboardingScreenState();
+}
+
+class _OnboardingScreenState extends State<OnboardingScreen> {
+  final _pageController = PageController();
+  var _currentPageIndex = 0;
+
+  void _updatePageIndicator(int index) {
+    setState(() {
+      _currentPageIndex = index;
+    });
+  }
+
+  void _dotNavigationClick(int index) {
+    _updatePageIndicator(index);
+    _pageController.jumpTo(index.toDouble());
+  }
+
+  void _nextPage() {
+    if (_currentPageIndex == 2) {
+      // to do
+    } else {
+      int page = _currentPageIndex + 1;
+      _pageController.jumpToPage(page);
+    }
+  }
+
+  void _skipPage() {
+    _updatePageIndicator(2);
+    _pageController.jumpToPage(2);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +55,8 @@ class OnboardingScreen extends StatelessWidget {
       body: Stack(
         children: [
           PageView(
+            controller: _pageController,
+            onPageChanged: _updatePageIndicator,
             children: const [
               OnboardingPage(
                 image: TImages.onBoardingImage1,
@@ -44,7 +79,7 @@ class OnboardingScreen extends StatelessWidget {
             top: TDeviceUtils.getAppBarHeight(),
             right: TSizes.defaultSpace,
             child: TextButton(
-              onPressed: () {},
+              onPressed: _skipPage,
               child: const Text('Skip'),
             ),
           ),
@@ -52,7 +87,8 @@ class OnboardingScreen extends StatelessWidget {
             bottom: TDeviceUtils.getBottomNavigationBarHeight() + 25,
             left: TSizes.defaultSpace,
             child: SmoothPageIndicator(
-              controller: PageController(),
+              controller: _pageController,
+              onDotClicked: _dotNavigationClick,
               count: 3,
               effect: ExpandingDotsEffect(
                 dotHeight: 6,
@@ -64,7 +100,7 @@ class OnboardingScreen extends StatelessWidget {
             right: TSizes.defaultSpace,
             bottom: TDeviceUtils.getBottomNavigationBarHeight(),
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: _nextPage,
               style: ElevatedButton.styleFrom(
                 shape: const CircleBorder(),
                 backgroundColor: isDark ? TColors.primary : TColors.black,
