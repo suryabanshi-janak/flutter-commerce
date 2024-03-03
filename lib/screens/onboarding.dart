@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_commerce/screens/login.dart';
 import 'package:iconsax/iconsax.dart';
 
 import 'package:flutter_commerce/widgets/onboarding_page.dart';
@@ -35,7 +36,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   void _nextPage() {
     if (_currentPageIndex == 2) {
-      // to do
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (ctx) => const LoginScreen(),
+        ),
+      );
     } else {
       int page = _currentPageIndex + 1;
       _pageController.jumpToPage(page);
