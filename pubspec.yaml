@@ -19,8 +19,9 @@ dependencies:
   flutter_native_splash: ^2.3.13
   smooth_page_indicator: ^1.1.0
   iconsax: ^0.0.8
-  get: ^4.6.6
   get_storage: ^2.1.1
+  flutter_riverpod: ^2.4.10
+  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:
@@ -41,7 +42,7 @@ flutter:
     - assets/icons/categories/
     - assets/images/animations/
     - assets/icons/payment_methods/
-    - assets/images/on_boarding_images/
+    - assets/images/onboarding/
 
   fonts:
     - family: Poppins

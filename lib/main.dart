@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_commerce/screens/onboarding.dart';
 
 import 'package:flutter_commerce/utils/theme/theme.dart';
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
+      home: OnboardingScreen(),
     );
   }
 }
