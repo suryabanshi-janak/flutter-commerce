@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_commerce/screens/verify_email.dart';
 import 'package:iconsax/iconsax.dart';
 
 import 'package:flutter_commerce/utils/constants/colors.dart';
@@ -120,7 +121,13 @@ class SignupForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (ctx) => const VerifyEmailScreen(),
+                    ),
+                  );
+                },
                 child: const Text(TTexts.createAccount),
               ),
             )
