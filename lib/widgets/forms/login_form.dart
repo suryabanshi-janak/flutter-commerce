@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_commerce/screens/forgot_password.dart';
-import 'package:flutter_commerce/screens/signup.dart';
+import 'package:flutter_commerce/screens/auth/forgot_password.dart';
+import 'package:flutter_commerce/screens/auth/signup.dart';
+import 'package:flutter_commerce/widgets/navigation_menu.dart';
 import 'package:iconsax/iconsax.dart';
 
 import 'package:flutter_commerce/utils/constants/sizes.dart';
@@ -58,7 +59,11 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (ctx) => const NavigationMenu()),
+                  );
+                },
                 child: const Text(TTexts.signIn),
               ),
             ),

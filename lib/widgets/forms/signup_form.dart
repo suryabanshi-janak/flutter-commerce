@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_commerce/screens/verify_email.dart';
+import 'package:flutter_commerce/screens/auth/verify_email.dart';
 import 'package:iconsax/iconsax.dart';
 
 import 'package:flutter_commerce/utils/constants/colors.dart';

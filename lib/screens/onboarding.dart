@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_commerce/screens/login.dart';
+import 'package:flutter_commerce/screens/auth/login.dart';
 import 'package:iconsax/iconsax.dart';
 
 import 'package:flutter_commerce/widgets/onboarding_page.dart';

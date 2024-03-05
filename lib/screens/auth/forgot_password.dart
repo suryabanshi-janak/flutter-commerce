@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_commerce/screens/reset_password.dart';
+import 'package:flutter_commerce/screens/auth/reset_password.dart';
 import 'package:iconsax/iconsax.dart';
 
 import 'package:flutter_commerce/utils/constants/sizes.dart';
