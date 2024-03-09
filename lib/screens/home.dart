@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_commerce/utils/constants/image_strings.dart';
+import 'package:flutter_commerce/widgets/promo_slider.dart';
 import 'package:iconsax/iconsax.dart';
 
 import 'package:flutter_commerce/widgets/circular_container.dart';
@@ -188,6 +189,7 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            const PromoSlider(),
           ],
         ),
       ),
