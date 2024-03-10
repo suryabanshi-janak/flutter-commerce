@@ -4,7 +4,7 @@ import 'package:flutter_commerce/utils/constants/colors.dart';
 
 import 'package:flutter_commerce/utils/constants/image_strings.dart';
 import 'package:flutter_commerce/utils/constants/sizes.dart';
-import 'package:flutter_commerce/widgets/rounded_image.dart';
+import 'package:flutter_commerce/common/rounded_image.dart';
 
 class PromoSlider extends StatefulWidget {
   const PromoSlider({super.key});

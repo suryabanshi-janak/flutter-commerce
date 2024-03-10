@@ -4,11 +4,11 @@ import 'package:flutter_commerce/utils/constants/image_strings.dart';
 import 'package:flutter_commerce/widgets/promo_slider.dart';
 import 'package:iconsax/iconsax.dart';
 
-import 'package:flutter_commerce/widgets/circular_container.dart';
+import 'package:flutter_commerce/common/circular_container.dart';
 import 'package:flutter_commerce/utils/constants/colors.dart';
-import 'package:flutter_commerce/widgets/custom_app_bar.dart';
+import 'package:flutter_commerce/common/custom_app_bar.dart';
 import 'package:flutter_commerce/utils/constants/sizes.dart';
-import 'package:flutter_commerce/widgets/custom_curved_clipper.dart';
+import 'package:flutter_commerce/common/custom_curved_clipper.dart';
 import 'package:flutter_commerce/utils/device/device_utility.dart';
 import 'package:flutter_commerce/utils/constants/text_strings.dart';
 
