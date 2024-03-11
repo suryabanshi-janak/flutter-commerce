@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_commerce/utils/constants/image_strings.dart';
-import 'package:flutter_commerce/widgets/promo_slider.dart';
+import 'package:flutter_commerce/widgets/vertical_product_card.dart';
 import 'package:iconsax/iconsax.dart';
 
+import 'package:flutter_commerce/widgets/promo_slider.dart';
 import 'package:flutter_commerce/common/circular_container.dart';
 import 'package:flutter_commerce/utils/constants/colors.dart';
 import 'package:flutter_commerce/common/custom_app_bar.dart';
 import 'package:flutter_commerce/utils/constants/sizes.dart';
 import 'package:flutter_commerce/common/custom_curved_clipper.dart';
 import 'package:flutter_commerce/utils/device/device_utility.dart';
+import 'package:flutter_commerce/utils/constants/image_strings.dart';
 import 'package:flutter_commerce/utils/constants/text_strings.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -190,6 +190,21 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             const PromoSlider(),
+            Padding(
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              child: GridView.builder(
+                itemCount: 4,
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisExtent: 288,
+                  mainAxisSpacing: TSizes.gridViewSpacing,
+                  crossAxisSpacing: TSizes.gridViewSpacing,
+                ),
+                itemBuilder: (_, index) => const VerticalProductCard(),
+              ),
+            )
           ],
         ),
       ),
