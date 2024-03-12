@@ -102,35 +102,35 @@ class VerticalProductCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        '\$35.5',
-                        style: Theme.of(context).textTheme.headlineMedium,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: TColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(TSizes.borderRadiusLg),
-                            bottomRight:
-                                Radius.circular(TSizes.productImageRadius),
-                          ),
-                        ),
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Iconsax.add,
-                              color: TColors.white,
-                            )),
-                      )
-                    ],
-                  ),
                 ],
               ),
+            ),
+            const Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  '\$35.5',
+                  style: Theme.of(context).textTheme.headlineMedium,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                    color: TColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(TSizes.borderRadiusLg),
+                      bottomRight: Radius.circular(TSizes.productImageRadius),
+                    ),
+                  ),
+                  child: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Iconsax.add,
+                        color: TColors.white,
+                      )),
+                )
+              ],
             ),
           ],
         ),

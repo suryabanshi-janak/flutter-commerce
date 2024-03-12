@@ -20,24 +20,22 @@ class _PromoSliderState extends State<PromoSlider> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(TSizes.defaultSpace),
-          child: CarouselSlider(
-            options: CarouselOptions(
-              viewportFraction: 1,
-              onPageChanged: (index, _) {
-                setState(() {
-                  _activeIndex = index;
-                });
-              },
-            ),
-            items: const [
-              RoundedImage(imageUrl: TImages.promoBanner1),
-              RoundedImage(imageUrl: TImages.promoBanner2),
-              RoundedImage(imageUrl: TImages.promoBanner3),
-            ],
+        CarouselSlider(
+          options: CarouselOptions(
+            viewportFraction: 1,
+            onPageChanged: (index, _) {
+              setState(() {
+                _activeIndex = index;
+              });
+            },
           ),
+          items: const [
+            RoundedImage(imageUrl: TImages.promoBanner1),
+            RoundedImage(imageUrl: TImages.promoBanner2),
+            RoundedImage(imageUrl: TImages.promoBanner3),
+          ],
         ),
+        const SizedBox(height: TSizes.spaceBtwSections),
         Center(
           child: Row(
             mainAxisSize: MainAxisSize.min,
