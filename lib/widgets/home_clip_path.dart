@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_commerce/common/section_heading.dart';
 import 'package:iconsax/iconsax.dart';
 
+import 'package:flutter_commerce/common/search_container.dart';
 import 'package:flutter_commerce/common/circular_container.dart';
 import 'package:flutter_commerce/common/custom_app_bar.dart';
 import 'package:flutter_commerce/common/custom_curved_clipper.dart';
@@ -8,7 +10,6 @@ import 'package:flutter_commerce/utils/constants/colors.dart';
 import 'package:flutter_commerce/utils/constants/image_strings.dart';
 import 'package:flutter_commerce/utils/constants/sizes.dart';
 import 'package:flutter_commerce/utils/constants/text_strings.dart';
-import 'package:flutter_commerce/utils/device/device_utility.dart';
 
 class HomeClipPath extends StatelessWidget {
   const HomeClipPath({super.key});
@@ -74,30 +75,9 @@ class HomeClipPath extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: TSizes.spaceBtwSections),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: TSizes.defaultSpace),
-                        child: Container(
-                          width: TDeviceUtils.getScreenWidth(context),
-                          padding: const EdgeInsets.all(TSizes.md),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius:
-                                BorderRadius.circular(TSizes.cardRadiusLg),
-                            border: Border.all(color: TColors.grey),
-                          ),
-                          child: Row(
-                            children: [
-                              const Icon(Iconsax.search_normal,
-                                  color: TColors.darkGrey),
-                              const SizedBox(width: TSizes.spaceBtwItems),
-                              Text(
-                                'Search in store',
-                                style: Theme.of(context).textTheme.bodySmall,
-                              )
-                            ],
-                          ),
-                        ),
+                      const SearchContainer(
+                        text: 'Search in store',
+                        showBackground: true,
                       ),
                       const SizedBox(height: TSizes.spaceBtwSections),
                       Padding(
@@ -106,12 +86,10 @@ class HomeClipPath extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'Popular categories',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headlineSmall!
-                                  .copyWith(color: TColors.white),
+                            const SectionHeading(
+                              title: 'Popular categories',
+                              textColor: TColors.white,
+                              showActions: false,
                             ),
                             const SizedBox(height: TSizes.spaceBtwItems),
                             SizedBox(

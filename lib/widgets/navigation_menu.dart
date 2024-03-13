@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-import 'package:flutter_commerce/screens/home.dart';
+import 'package:flutter_commerce/screens/shop/home.dart';
 import 'package:flutter_commerce/screens/profile.dart';
-import 'package:flutter_commerce/screens/store.dart';
+import 'package:flutter_commerce/screens/shop/store.dart';
 import 'package:flutter_commerce/screens/wishlist.dart';
 import 'package:flutter_commerce/utils/helpers/helper_functions.dart';
 

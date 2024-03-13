@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_commerce/common/styles/shadows.dart';
 import 'package:iconsax/iconsax.dart';
 
 import 'package:flutter_commerce/common/rounded_image.dart';
+import 'package:flutter_commerce/common/styles/shadows.dart';
 import 'package:flutter_commerce/utils/constants/colors.dart';
 import 'package:flutter_commerce/utils/constants/image_strings.dart';
 import 'package:flutter_commerce/utils/constants/sizes.dart';
@@ -109,11 +109,14 @@ class VerticalProductCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  '\$35.5',
-                  style: Theme.of(context).textTheme.headlineMedium,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
+                Padding(
+                  padding: const EdgeInsets.only(left: TSizes.sm),
+                  child: Text(
+                    '\$35.5',
+                    style: Theme.of(context).textTheme.headlineMedium,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
                 Container(
                   decoration: const BoxDecoration(
