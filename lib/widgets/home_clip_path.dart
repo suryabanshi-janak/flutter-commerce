@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_commerce/common/section_heading.dart';
-import 'package:iconsax/iconsax.dart';
 
+import 'package:flutter_commerce/common/section_heading.dart';
+import 'package:flutter_commerce/widgets/shopping_cart_button.dart';
 import 'package:flutter_commerce/common/search_container.dart';
 import 'package:flutter_commerce/common/circular_container.dart';
 import 'package:flutter_commerce/common/custom_app_bar.dart';
@@ -54,24 +54,8 @@ class HomeClipPath extends StatelessWidget {
                             ),
                           ],
                         ),
-                        actions: [
-                          IconButton(
-                            onPressed: () {},
-                            icon: Badge(
-                              label: Text(
-                                '2',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .labelLarge!
-                                    .copyWith(color: TColors.white),
-                              ),
-                              backgroundColor: TColors.black,
-                              child: const Icon(
-                                Iconsax.shopping_bag,
-                                color: TColors.white,
-                              ),
-                            ),
-                          )
+                        actions: const [
+                          ShoppingCartButton(iconColor: TColors.white),
                         ],
                       ),
                       const SizedBox(height: TSizes.spaceBtwSections),
